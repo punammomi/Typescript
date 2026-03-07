@@ -30,10 +30,15 @@ console.log((callfunction ([mul,div], [[1,2],[4,5]])))
 interface Person{
     name : string,
     age :number
+    hello: () => void
 }
 
 const person: Person = {
     name : "Punam",
-    age : 24
+    age : 24,
+    hello: function (){
+        console.log(this.name + " says hi")
+    }
 }
 console.log(person.name)
+console.log(person.hello())
