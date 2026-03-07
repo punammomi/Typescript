@@ -53,7 +53,20 @@ interface Manager extends Employee,Person{
     name: string, age : number
 }
 
-const manager: Manager ={
- name :"Tom",
- age: 45
+function getPerson(p: Person) : Person{
+    return{
+        name:"Tom",
+    age: 23,
+    hello: function (){
+        console.log(this.name + " get lost")
+    }
+    }
+
 }
+const per= getPerson({
+    name: "A",
+    age: 20,
+    hello() {}
+})
+
+per.hello()
