@@ -77,4 +77,12 @@ abstract class Animal{
         console.log("Moving along.....")
         this.makesound(direction)
     }
+}class Dog extends Animal{
+    makesound(direction:number) {
+    console.log("Wolf Wolf")
+
+    }
+
 }
+const dog = new Dog()
+dog.move(10)
