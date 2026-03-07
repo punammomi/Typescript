@@ -42,3 +42,18 @@ const person: Person = {
 }
 console.log(person.name)
 console.log(person.hello())
+
+
+interface Employee extends Person{
+    employeeId : number
+}
+
+interface Manager extends Employee,Person{
+    employees: Person [],
+    name: string, age : number
+}
+
+const manager: Manager ={
+ name :"Tom",
+ age: 45
+}
