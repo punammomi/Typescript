@@ -70,3 +70,11 @@ const per= getPerson({
 })
 
 per.hello()
+
+abstract class Animal{
+    abstract makesound(direction:number) : void
+    move(direction:number){
+        console.log("Moving along.....")
+        this.makesound(direction)
+    }
+}
