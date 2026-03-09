@@ -123,3 +123,19 @@ class Zebra implements Ani{
 }
 const zebra: Ani = new Zebra("Tim", "Brown")
 zebra.speak()
+
+class Snake{
+    static instanceCount : number = 11
+    name : string
+
+    constructor(name: string){
+        Snake.instanceCount++
+        this.name = name
+    }
+}
+
+const Snake1 = new Snake( "Naja Naja")
+console.log(Snake.instanceCount)
+
+const Snake2 = new Snake( "Agojar")
+console.log(Snake.instanceCount)
