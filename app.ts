@@ -132,6 +132,9 @@ class Snake{
         Snake.instanceCount++
         this.name = name
     }
+    static decreaseCount(){
+        this.instanceCount--
+    }
 }
 
 const Snake1 = new Snake( "Naja Naja")
@@ -139,3 +142,7 @@ console.log(Snake.instanceCount)
 
 const Snake2 = new Snake( "Agojar")
 console.log(Snake.instanceCount)
+Snake.decreaseCount()
+console.log(Snake.instanceCount)
+
+
