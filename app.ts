@@ -97,3 +97,29 @@ class Cat extends Animal{
 
 const cat = new Cat ()
 cat.move(10) 
+
+
+interface Ani{
+    speak() : void
+}
+
+class Zebra implements Ani{
+    private name : string
+    private color : string
+
+    constructor(name: string, color: string) {
+        {
+            this.name = name 
+            this.color = color
+        }
+    }
+    speak(){
+        console.log(`I am ${this.name} and I am ${this.color}`)
+    }
+
+    test(){
+        return 1
+    }
+}
+const zebra: Ani = new Zebra("Tim", "Brown")
+zebra.speak()
